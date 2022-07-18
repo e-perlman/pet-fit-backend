@@ -14,5 +14,9 @@ end
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
 
-# use Users Controller if you have other controller
+
+use OwnersController
 run ApplicationController
+use PetsController
+
+
