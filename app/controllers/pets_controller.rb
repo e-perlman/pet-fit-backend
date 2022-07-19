@@ -54,6 +54,6 @@ class PetsController < ApplicationController
   end
 
   def serialized_pet
-    @pet.to_json(include: :owners)
+    @pet.to_json(include: :pet_statuses)
   end
 end
