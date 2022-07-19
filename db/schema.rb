@@ -32,8 +32,15 @@ ActiveRecord::Schema.define(version: 2022_07_19_223204) do
   end
 
   create_table "pet_statuses", force: :cascade do |t|
+    t.string "food_type"
+    t.integer "cups_of_food_daily"
+    t.integer "daily_exercise_minutes"
+    t.integer "hours_of_sleep"
+    t.datetime "most_recent_vet_visit"
+    t.integer "pet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pet_id"], name: "index_pet_statuses_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
