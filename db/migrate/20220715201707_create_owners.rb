@@ -4,7 +4,6 @@ class CreateOwners < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.integer :age
-      t.string :bio
       t.string :email
       t.string :password_digest
       t.timestamp :created_at

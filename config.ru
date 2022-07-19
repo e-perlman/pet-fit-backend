@@ -16,7 +16,8 @@ use Rack::JSONBodyParser
 
 
 use OwnersController
-run ApplicationController
 use PetsController
+run ApplicationController
+
 
 
