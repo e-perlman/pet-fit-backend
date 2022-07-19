@@ -5,7 +5,6 @@ class CreateOwners < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.integer :age
       t.string :email
-      t.string :password_digest
       t.timestamp :created_at
       t.timestamp :updated_at
       t.timestamps null: false

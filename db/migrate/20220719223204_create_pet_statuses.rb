@@ -5,8 +5,9 @@ class CreatePetStatuses < ActiveRecord::Migration[5.2]
       t.integer :cups_of_food_daily
       t.integer :daily_exercise_minutes
       t.integer :hours_of_sleep
-      t.datetime :most_recent_vet_visit
+      t.date :most_recent_vet_visit
       t.references :pet, foreign_key: {on_delete: :cascade}
+      t.timestamp :created_at
       t.timestamps null: false
     end
   end

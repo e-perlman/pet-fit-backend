@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2022_07_19_223204) do
     t.string "last_name"
     t.integer "age"
     t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_07_19_223204) do
     t.integer "cups_of_food_daily"
     t.integer "daily_exercise_minutes"
     t.integer "hours_of_sleep"
-    t.datetime "most_recent_vet_visit"
+    t.date "most_recent_vet_visit"
     t.integer "pet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

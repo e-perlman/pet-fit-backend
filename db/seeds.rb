@@ -52,6 +52,7 @@ PetOwnership.create(owner: chelsea, pet:maisy)
 PetOwnership.create(owner: alena, pet:maisy)
 PetOwnership.create(owner: alena, pet:elliot)
 
+PetStatus.create(pet:willow, cups_of_food_daily: 3, daily_exercise_minutes: 60, hours_of_sleep: 7, most_recent_vet_visit:'17-02-2022')
 
 
 
