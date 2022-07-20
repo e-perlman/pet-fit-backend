@@ -1,3 +1,4 @@
+require "pry"
 class PetOwnershipsController < ApplicationController
 
   # GET: /pet_ownerships
@@ -38,7 +39,7 @@ class PetOwnershipsController < ApplicationController
   end
 
   # DELETE: /pet_ownerships/5
-  delete "/pet_ownerships/:id/delete" do
+  delete "/pet_ownerships/:id" do
     find_pet_ownership
     if @pet_ownership&.destroy
       {errors: "Record successfully destroyed."}.to_json

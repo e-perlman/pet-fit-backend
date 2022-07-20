@@ -1,5 +1,5 @@
 class Owner < ActiveRecord::Base
-    has_many :pet_ownerships
+    has_many :pet_ownerships, dependent: :destroy
     has_many :pets, through: :pet_ownerships
     validates :first_name, presence: true
     validates :last_name, presence: true
