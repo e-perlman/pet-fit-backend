@@ -2,7 +2,8 @@ class PetsController < ApplicationController
 
   # GET: /pets
   get "/pets" do
-    Pet.all.to_json(include: [owners: {except: [:created_at, :updated_at]}], except: [:created_at, :updated_at])
+    # Pet.all.to_json(include: [owners: {except: [:created_at, :updated_at]}], except: [:created_at, :updated_at])
+    Pet.all.to_json(include: [:owners,:pet_statuses])
   end
 
   # POST: /pets
@@ -54,6 +55,6 @@ class PetsController < ApplicationController
   end
 
   def serialized_pet
-    @pet.to_json(include: :pet_statuses)
+    @pet.to_json(include: [:owners,:pet_statuses])
   end
 end

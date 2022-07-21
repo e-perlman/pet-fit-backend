@@ -3,7 +3,7 @@ class OwnersController < ApplicationController
 
   # GET: /owners
   get "/owners" do
-    Owner.all.to_json(include: [pets: {except: [:created_at, :updated_at]}], except: [:created_at, :updated_at])
+    Owner.all.to_json(include:[:pets=>{:include=>:pet_statuses}])
   end
 
   # POST: /owners
