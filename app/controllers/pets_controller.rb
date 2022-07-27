@@ -10,7 +10,6 @@ class PetsController < ApplicationController
   # POST: /pets
   post "/pets" do
     @pet=Pet.create(params)
-    binding.pry
     if @pet.id 
       serialized_pet
     else
